@@ -61,6 +61,40 @@ a{
     text-align: right;
 }
 
+.menu {
+    background: #767676;
+    padding: 10px 0;
+}
+.list-menu {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    text-align: center;
+}
+.menu-item {
+    display: inline-block;
+    position: relative;
+}
+.menu-link {
+    color: white;
+    padding: 10px 15px;
+    font-size: 30px;
+    font-weight: 400;
+    font-family: "PT Sans";
+    display: block;
+}
+.menu-link:hover {
+    text-decoration: underline;
+    cursor: pointer;
+}
+.menu-item:not(:last-child)::after {
+    content: "|";
+    position: absolute;
+    right: -3px;
+    top: 50%;
+    transform: translateY(-50%);
+    color: #fff;
+}
 @media (max-width: 600px) {
     .header-content {
         flex-direction: column;
