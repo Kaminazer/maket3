@@ -1,0 +1,79 @@
+@font-face {
+    font-family: "Open Sans Condensed";
+    src: url(../fonts/OpenSansCondensed-Light.ttf) format('truetype');
+    font-weight: 300;
+}
+
+@font-face {
+    font-family: "PT Sans";
+    src: url(../fonts/PTSans-Regular.ttf) format('truetype');
+    font-weight: 400;
+}
+
+@font-face {
+    font-family: "PT Sans";
+    src: url(../fonts/PTSans-Bold.ttf) format('truetype');
+    font-weight: 700;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+body{
+    width: 100%;
+    overflow-x: hidden;
+}
+a{
+    text-decoration: none;
+    color: #767676;
+}
+.header {
+    width: 100%;
+    padding: 45px 10px 65px;
+}
+.header-content {
+    max-width: 980px;
+    margin: 0 auto;
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-between;
+}
+.phone-number{
+    display: block;
+    font-size: 40px;
+    font-weight: 300;
+    font-family: "Open Sans Condensed";
+    letter-spacing: 1px;
+    line-height: 46px;
+    text-align: right;
+}
+.feedback-link a{
+    font-size: 24px;
+    font-weight: 700;
+    font-family: "PT Sans";
+    text-align: right;
+    letter-spacing: 1px;
+    line-height: 46px;
+    text-decoration: underline dashed;
+}
+.feedback-link {
+    text-align: right;
+}
+
+@media (max-width: 600px) {
+    .header-content {
+        flex-direction: column;
+        align-items: center;
+    }
+    
+    .logo {
+        margin-bottom: 10px;
+    }
+
+    .phone-number, .feedback-link {
+        text-align: center;
+    }
+}
+
+
