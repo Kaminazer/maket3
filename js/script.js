@@ -4,13 +4,10 @@ $(document).ready(function() {
         $('body').toggleClass('lock');
     })
     $('.slider').slick({
-        arrows:true,
-        dots:false,
-        adaptiveHeight:true,
-        speed:500,
+        speed: 4000,
         infinite:true,
-        autoplay:true,
-        autoplay:4000,
-        pauseOnFocus:false,
-    });
+        fade: true,
+        autoplay: true,
+        autoplaySpeed: 4000
+    });    
 });
