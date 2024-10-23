@@ -136,6 +136,33 @@ a{
     transition: opacity 0.5s ease-in-out;
 }
 
+.container{
+    max-width: 980px;
+    margin: 0 auto;
+}
+
+.breadcrumb-item{
+    padding: 10px 0 7px;
+    font-size: 14px;
+    letter-spacing: 0px;
+    line-height: 18px;
+    font-weight: 400;
+    font-family: "PT Sans"; 
+}
+
+.breadcrumb-item a {
+    text-decoration: underline;
+}
+
+.content{
+    display: flex;
+}
+.rightblock{
+    max-width: 780px;
+}
+.leftblock{
+    max-width: 200px;
+}
 @media (max-width:1450px){
     .slick-arrow.slick-prev{
         left: 230px;
