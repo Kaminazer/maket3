@@ -9,6 +9,12 @@ $(document).ready(function() {
         $('.content-menu').toggleClass('content-menu--active');
         $('body').toggleClass('lock');
     }),
+    $('.header__phone-icon').click(function(event){
+        $('.header__phone-icon').toggleClass('header__phone-icon--active');
+        $('.header__phone').toggleClass('header__phone--active');
+        $('body').toggleClass('lock');
+    }),
+
     $('.slider').slick({
         speed: 4000,
         infinite:true,
