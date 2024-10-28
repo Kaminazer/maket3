@@ -25,6 +25,9 @@ a {
     max-width: 1000px;
 }
 
+.wrapper {
+    min-height: 100vh;
+}
 .header {
     width: 100%;
     padding: 35px 0 65px;
@@ -357,6 +360,7 @@ a {
 }
 
 .footer {
+    bottom: 0;
     width: 100%;
     background-color:#767676 ;
     color: #fff;
@@ -458,6 +462,10 @@ a {
 }
 
 @media (max-width:1024px) {
+    .wrapper {
+        position: relative;
+        top: 80px;
+    }
     .header__feedback-icon,
     .header__phone-icon,
     .header__burger{
