@@ -7,6 +7,7 @@ $(document).ready(function() {
     $('.content__burger').click(function(event){
         $('.content__burger').toggleClass('content__burger--active');
         $('.content-menu').toggleClass('content-menu--active');
+        $('body').toggleClass('lock');
     }),
     $('.slider').slick({
         speed: 4000,

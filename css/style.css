@@ -341,6 +341,63 @@ a {
     max-width: 48%;
 }
 
+.footer {
+    width: 100%;
+    background-color:#767676 ;
+    color: #fff;
+    font-size: 14px;
+    font-weight: 400;
+    font-family: "PT Sans";
+
+}
+
+.footer-container {
+    display: flex;
+    justify-content: space-between;
+    padding: 50px 10px;
+}
+
+.footer__leftblock span, 
+.footer__leftblock a
+{
+    display: block;
+    letter-spacing: 0px;
+    line-height: 22px;
+}
+
+.footer__leftblock a {
+    color: #fff;
+} 
+
+.footer__menu-list {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.footer__menu-item {
+    color: #fff;
+    text-decoration: underline;
+}
+
+
+.footer__rightblock {
+    display: flex;
+    max-width: 30%;
+}
+.title-companydev {
+    display: block;
+    padding-left: 10px;
+}
+
+.logo-companydev {
+    max-height: 40px;
+}
+.title-companydev a {
+    color: #fff;
+    text-decoration: underline;
+    
+}
 
 
 
@@ -564,7 +621,22 @@ a {
         margin: 0 auto 20px;
         max-width: 200px;
     }
+    
+    .footer-container {
+        flex-direction: column;
+        padding: 25px 10px;
+    }
 
+    .footer__leftblock,
+    .footer__menu 
+    {
+        margin-bottom: 16px;
+        width: 100%;
+    }
+    
+    .footer__rightblock {
+        max-width: 100%;
+    }
 }
 
 @media (max-width:600px) {
@@ -619,6 +691,7 @@ a {
     .content-menu { 
         position: absolute;
         width: 50%;
+        height: 100%;
 
     }
     .content-menu--active{
