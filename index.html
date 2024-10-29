@@ -44,6 +44,40 @@
                     <a href="#">Зворотний зв'язок</a>
                 </div>
             </div>
+            <div class="overlay"></div>
+            <div class="feedback">
+                <div class="feedback__close">
+                    <a href=""><img src="image/icon_close.svg" alt=""></a>
+                </div>              
+                <div class="feedback__container">
+                    <p class="feedback__title">ЗВОРОТНИЙ ЗВ'ЯЗОК</p>
+                    <form action="#" name="feedback-form" method="post" id="feedback-form" novalidate>
+                        <div class="feedback__inputs">
+                            <div class="feedback__field">
+                                <label for="name">Ваше ім'я *</label>
+                                <input type="text" id="name" name="name" required>
+                            </div>
+                            <div class="feedback__field">
+                                <label for="phone">Телефон *</label>
+                                <input id="phone" name="phone" required>
+                                <div class="error" id="phone-error"></div>
+                            </div>
+                            <div class="feedback__field">
+                                <label for="email">Email *</label>
+                                <input id="email" name="email" required >
+                                <div class="error" id="email-error"></div>
+                            </div>
+                            <div class="feedback__field">
+                                <label for="message">Повідомлення</label>
+                                <textarea name="message" id="message"></textarea>
+                            </div>
+                            <div class="feedback__button">
+                                <button type="submit">Надіслати</button>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
         </div>
     </header>
     <div class="wrapper">
@@ -82,7 +116,7 @@
                 <li class="breadcrumb-item active" aria-current="page">Побутова техніка</li>
                 </ol>
             </nav>
-            <main class="content">
+            <div class="content">
                 <section class="content__leftblock">
                     <div class="content__burger">
                         <span></span>
@@ -376,13 +410,13 @@
                         </div>
                     </div>
                 </div>
-            </main>
+            </div>
         </div>
     </div>
     <footer class="footer">
         <div class="container footer-container">
             <div class="footer__leftblock">
-                <span class="copyright">© 2012–2013 ЗАО «Компанія»</span>
+                <span class="copyright">&copy; 2012–2013 ЗАО «Компанія»</span>
                 <a href="#">info@name.ru</a>
             </div>
             <div class="footer__menu">

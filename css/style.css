@@ -17,6 +17,7 @@ html, body {
     color: #767676;
 }
 
+
 a {
     text-decoration: none;
     color: #767676;
@@ -93,6 +94,107 @@ a {
     letter-spacing: 1px;
     line-height: 46px;
 }
+.overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background-color: rgba(0, 0, 0, 0.8);
+    display: none;
+}
+.feedback{
+    display: none;
+    position: absolute;
+    top: 110%;
+    right: 40%;
+}
+
+.feedback__close {
+    width: 30px;
+    background: #767676;
+    position: relative;
+    right: -100%;
+}
+
+.feedback img {
+    width: 100%;
+}
+
+.feedback__container {
+    max-width: 470px;
+    width: 470px;
+    height: 600px;
+    background-color: #fff;
+    padding: 26px 62px;
+}
+
+.feedback__inputs {
+    max-width: 340px;   
+}
+
+.feedback__title {
+    font-size: 24px;
+    text-transform: uppercase;
+    color: #535353;
+    font-weight: 700;
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.feedback__field {
+    margin-bottom: 18px;
+}
+
+.feedback__field:last-child {
+    margin-bottom: 0;
+}
+
+.feedback__field {
+    display: flex;
+    flex-direction: column;
+}
+
+.feedback__field label {
+    color: #535353;
+    text-align: center;
+}
+
+input {
+    height: 40px;
+    padding: 10px;
+}
+
+.submitted input:required:invalid {
+    box-shadow: inset 0 0 6.5px rgba(228, 106, 106, 0.75);
+    border: 1px solid #ff8383;
+}
+
+input, textarea {
+    border: 1px solid #c3c3c3 ;
+    width: 100%;
+}
+
+textarea {
+    height: 140px;
+}
+.feedback__button button {
+    width: 140px;
+    height: 40px;
+    font-size: 18px;
+    line-height: 20px;
+    text-transform: uppercase;
+    color: #fff;
+    font-weight: 700;
+    background: #767676;
+    text-align: center;
+    border: none;
+}
+.feedback__button {
+    width: 100%;
+    text-align: center;
+}
+
 
 .menu {
     background: #767676;
@@ -341,6 +443,11 @@ a {
 }
 .content__pagination {
     margin-bottom: 60px;
+}
+
+.page-link {
+    border: none;
+    
 }
 .content__rightblock-bottom {
     display: flex;
@@ -632,6 +739,9 @@ a {
 }
 
 @media (max-width:768px) {
+    .feedback__container {
+
+    }
 
     .menu__link {
         font-size: 18px;
