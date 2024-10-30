@@ -32,7 +32,7 @@ $(document).ready(function() {
         event.preventDefault();
         $('.feedback').fadeOut(1000);
         $('.overlay').fadeOut(300);
-        $('.header__phone').removeClass('lock');
+        $('body').removeClass('lock');
     });
     
     $("form").submit(function(event) {

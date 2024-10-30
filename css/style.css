@@ -19,6 +19,7 @@ html, body {
 
 .lock {
     height: 100vh;
+    overflow: hidden;
 }
 
 a {
@@ -513,7 +514,6 @@ textarea {
     text-decoration: underline;
 }
 
-
 .footer__rightblock {
     display: flex;
     max-width: 30%;
@@ -789,16 +789,23 @@ textarea {
     .header__title{
         display: none;
     }
-
+    .content {
+        position: relative;
+    }
     .content-menu { 
         position: absolute;
-        width: 50%;
-        height: 100%;
+        padding-top: 50px;
+        padding-left: 10px;
+        width: 85%;
+        top: -15px;
+        height: 100vh;
+        background-color: #fff;
+        overflow: auto;
 
     }
     .content-menu--active{
         display: block;
-        background-color: #fff;
+    
     }
     .content__burger {
         display: block;
@@ -806,6 +813,7 @@ textarea {
         bottom: 10px;
         width: 30px;
         height: 20px;
+        z-index: 50;
     }
 
     .content__burger span {
