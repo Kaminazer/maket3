@@ -17,6 +17,9 @@ html, body {
     color: #767676;
 }
 
+.lock {
+    height: 100vh;
+}
 
 a {
     text-decoration: none;
@@ -108,13 +111,14 @@ a {
     position: absolute;
     top: 110%;
     right: 40%;
+    height: auto;
 }
 
 .feedback__close {
     width: 30px;
     background: #767676;
     position: relative;
-    right: -100%;
+    right: -90%;
 }
 
 .feedback img {
@@ -122,11 +126,13 @@ a {
 }
 
 .feedback__container {
-    max-width: 470px;
+    max-width: 90%;
     width: 470px;
-    height: 600px;
+    height: auto;
     background-color: #fff;
     padding: 26px 62px;
+    max-height: 80vh;
+    overflow: auto;
 }
 
 .feedback__inputs {
@@ -195,7 +201,6 @@ textarea {
     text-align: center;
 }
 
-
 .menu {
     background: #767676;
     padding: 10px 0;
@@ -215,7 +220,6 @@ textarea {
     display: inline-block;
     position: relative;
 }
-
 
 .menu__link {
     color: white;
@@ -346,12 +350,13 @@ textarea {
 }
 
 .content-menu__sublink{
-    font-size: 11px;
+    font-size: 14px;
     line-height: 25px;
 }
 
 .content-menu__sublink:hover {
     font-weight: 700;
+    color: #000;
     text-decoration: underline;
     text-underline-offset: 3px;
 }
@@ -447,7 +452,12 @@ textarea {
 
 .page-link {
     border: none;
-    
+    color: #767676;
+    letter-spacing: 8px;
+    line-height: 22px;
+}
+.page-link--active {
+    font-size: 20px;
 }
 .content__rightblock-bottom {
     display: flex;
@@ -520,34 +530,6 @@ textarea {
     text-decoration: underline;
 }
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 @media (max-width:1450px) {
     .slick-arrow.slick-prev {
         left: 230px;
@@ -559,6 +541,10 @@ textarea {
 }
 
 @media (max-width:1368px) {
+    .feedback{
+        right: 25%;
+    }
+
     .slick-arrow.slick-prev {
         left: 200px;
     }
@@ -680,23 +666,29 @@ textarea {
         bottom: 9px;
     }
 
+    .feedback{
+        overflow: hidden;
+    }
     .menu {
         position: fixed;
+        transition: ease 1s;
         top: -100%;
         left: 0;
         width: 100%;
         height: 100%;
-        background-color: #1864a4;
+        background-color: #767676;
         padding: 100px 10px 20px 10px;
         overflow-y: auto;
         z-index: 1004;
     }
 
     .menu--active {
+        transition: ease 1s;
         top: 0;
     }
 
     .menu__item {
+        transition: ease 1s;
         display: block;
         position: static;
         text-align: center;
@@ -738,9 +730,22 @@ textarea {
     }
 }
 
-@media (max-width:768px) {
-    .feedback__container {
+@media (max-width:1024px) and (orientation: landscape){
+    .feedback {
+        overflow: auto;
+    }
+}
 
+@media (orientation: landscape) {
+    .feedback {
+        top: 20%;
+    }
+}
+
+@media (max-width:768px) {
+
+    .feedback{
+        right: 10%;
     }
 
     .menu__link {
@@ -791,6 +796,13 @@ textarea {
     .menu {
         padding-top: 100px;
     }
+    .feedback{ 
+        max-width: 85%;
+    }
+    .feedback__container{
+        max-width: 100%;
+    }
+
     .slick-arrow.slick-prev {
         left: 20px;
     }
@@ -873,3 +885,5 @@ textarea {
     }
 
 }
+
+

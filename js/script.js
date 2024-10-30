@@ -1,32 +1,37 @@
 $(document).ready(function() {
     $('.header__burger').click(function(event) {
+        event.preventDefault();
         $('.header__burger').toggleClass('header__burger--active');
         $('.menu').toggleClass('menu--active');
         $('body').toggleClass('lock');
     });
 
     $('.content__burger').click(function(event) {
+        event.preventDefault();
         $('.content__burger').toggleClass('content__burger--active');
         $('.content-menu').toggleClass('content-menu--active');
         $('body').toggleClass('lock');
     });
 
     $('.header__phone-icon').click(function(event) {
+        event.preventDefault();
         $('.header__phone-icon').toggleClass('header__phone-icon--active');
         $('.header__phone').toggleClass('header__phone--active');
-        $('body').toggleClass('lock');
     });
 
 
     $('.header__feedback-link a, .header__feedback-icon').click(function(event) {
+        event.preventDefault();
         $('.feedback').fadeIn(1000);
         $('.overlay').fadeIn(300);
+        $('body').addClass('lock');
     });
     
     $('.feedback__close').click(function(event) {
         event.preventDefault();
         $('.feedback').fadeOut(1000);
         $('.overlay').fadeOut(300);
+        $('.header__phone').removeClass('lock');
     });
     
     $("form").submit(function(event) {
