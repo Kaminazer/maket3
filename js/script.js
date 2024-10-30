@@ -3,6 +3,7 @@ $(document).ready(function() {
         event.preventDefault();
         $('.header__burger').toggleClass('header__burger--active');
         $('.menu').toggleClass('menu--active');
+        $('.menu__list').removeClass('container');
         $('body').toggleClass('lock');
     });
 
@@ -89,10 +90,20 @@ $(document).ready(function() {
     });
 
     $('.slider').slick({
-        speed: 4000,
+        speed: 2000,
         infinite: true,
         fade: true,
+        cssEase: 'ease-in-out',
         autoplay: true,
-        autoplaySpeed: 4000
+        autoplaySpeed: 4000,
+        waitForAnimate:false,
+        responsive:[
+            {
+                breakpoint: 768,
+                settings: {
+                    arrows: false
+                }
+            }
+        ]
     });
 });

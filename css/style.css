@@ -27,6 +27,7 @@ a {
 }
 .container {
     max-width: 1000px;
+    padding:0 10px ;
 }
 
 .wrapper {
@@ -210,12 +211,6 @@ textarea {
     list-style-type: none;   
 }
 
-.menu__list:first-child {
-    position: relative;
-    left: 19px;
-
-}
-
 .menu__item {
     display: inline-block;
     position: relative;
@@ -258,25 +253,31 @@ textarea {
 .slick-arrow{
     position: absolute;
     top: 50%;
+    right: 50%;
     font-size: 0;
     width: 34px;
-    height: 50px;
+    height: 60px;
     z-index: 1001;
+    margin-top: -30px;
 }
 
 .slick-arrow.slick-prev{
-    left: 320px;
-    background: url('../image/left.jpg') 0 0 / 100% no-repeat;
+    transform: translate(-456px, 0);
+    background: url('../image/left.jpg') center center / 100% no-repeat;
 }
 
 .slick-arrow.slick-next{
-    right: 320px;
-    background: url('../image/right.jpg') 0 0 / 100% no-repeat;
+   transform: translate(456px, 0);
+    background: url('../image/right.jpg') center center / 100% no-repeat;
 }
 
 .slider__item{
     text-align: center;
     transition: opacity 0.5s ease-in-out;
+}
+
+.slider__item img {
+    max-width: 100%;
 }
 .breadcrumb {
     margin-bottom: 20px;
@@ -530,30 +531,6 @@ textarea {
     text-decoration: underline;
 }
 
-@media (max-width:1450px) {
-    .slick-arrow.slick-prev {
-        left: 230px;
-    }
-    
-    .slick-arrow.slick-next {
-        right: 230px;
-    }
-}
-
-@media (max-width:1368px) {
-    .feedback{
-        right: 25%;
-    }
-
-    .slick-arrow.slick-prev {
-        left: 200px;
-    }
-    
-    .slick-arrow.slick-next {
-        right: 200px;
-    }
-}
-
 @media (max-width:1024px) {
     .wrapper {
         position: relative;
@@ -694,16 +671,22 @@ textarea {
         text-align: center;
         margin-bottom: 0px 0px 20px 0px;
     }
+    .menu__list {
+        margin: 0;
+        padding: 0;
+    }
 
     .menu__link {
         font-size: 20px;
     }
 
     .slick-arrow.slick-prev {
+        transform: translate(0, 0);
         left: 60px;
     }
 
     .slick-arrow.slick-next {
+        transform: translate(0, 0);
         right: 60px;
     }
     
@@ -751,10 +734,6 @@ textarea {
     .menu__link {
         font-size: 18px;
     }
-
-    .slider__item img {
-        max-width: 760px;
-    }
     
     .content__rightblock {
         width: 100%;
@@ -801,18 +780,6 @@ textarea {
     }
     .feedback__container{
         max-width: 100%;
-    }
-
-    .slick-arrow.slick-prev {
-        left: 20px;
-    }
-
-    .slick-arrow.slick-next {
-        right: 20px;
-    }
-
-    .slider__item img {
-        max-width: 580px;
     }
 }
 
@@ -885,5 +852,7 @@ textarea {
     }
 
 }
+
+
 
 
